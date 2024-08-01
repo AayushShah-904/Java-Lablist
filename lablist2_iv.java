@@ -1,3 +1,7 @@
+/*
+2)
+iv.Write a program to accept a line and check how many consonants and vowels are there in line.
+*/
 import java.util.*;
 
 class lablist2_iv
@@ -9,17 +13,21 @@ class lablist2_iv
 		int cv=0;
 		int cc=0;
 		System.out.println("Enter String to check ");
-		str=sc.nextLine();
-		System.out.println(str);
+		str=sc.nextLine().toLowerCase();
+	
 		
-		if (str == 'a' ) {
+		
+    for (char c : str.toCharArray()) {
+        if (Character.isLetter(c)) {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
                 cv++;
+            } else {
+                cc++;
             }
-			else
-			{
-				cc++;
-			}
-			
+        }
+    }
+
+
 		System.out.println("vowles " +cv);
 		System.out.println("constant " +cc);
 			
